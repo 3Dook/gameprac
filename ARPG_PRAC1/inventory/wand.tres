@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" load_steps=3 format=3 uid="uid://bx1du76pidou4"]
+
+[ext_resource type="Script" path="res://inventory/inventoryItem.gd" id="1_r6qrl"]
+[ext_resource type="Texture2D" uid="uid://dr0ha76s4qtt5" path="res://art/Sprite.png" id="2_nqfjl"]
+
+[resource]
+script = ExtResource("1_r6qrl")
+name = "wand"
+texture = ExtResource("2_nqfjl")
+maxAmountPrStack = 5
