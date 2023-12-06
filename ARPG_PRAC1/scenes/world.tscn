@@ -3402,7 +3402,7 @@ scale = Vector2(1, 1.00402)
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="TileMap/slime3"]
-position = Vector2(-75, -61)
+position = Vector2(-47, -13.0004)
 
 [node name="slime4" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("6_2dan2")]
 position = Vector2(547, 316.265)
@@ -3410,7 +3410,7 @@ scale = Vector2(1, 1.00402)
 endPoint = NodePath("Marker2D")
 
 [node name="Marker2D" type="Marker2D" parent="TileMap/slime4"]
-position = Vector2(5.99994, -96)
+position = Vector2(-142, -66.9997)
 
 [node name="slime2" parent="TileMap" node_paths=PackedStringArray("endPoint") instance=ExtResource("6_2dan2")]
 position = Vector2(245, 270)

@@ -6,13 +6,16 @@ extends CharacterBody2D
 
 @onready var animations = $AnimationPlayer
 
+@onready var playerPos = get_parent().get_node("Player")
+
 var isDeath: bool = false
 var startPosition
 var endPosition
 
 func _ready():
 	startPosition = position
-	endPosition = endPoint.global_position
+	#endPosition = endPoint.global_position
+	endPosition = playerPos.global_position
 	
 func changeDirection():
 	var tempEnd = endPosition
@@ -20,6 +23,7 @@ func changeDirection():
 	startPosition = tempEnd
 	
 func updateVelocity():
+	endPosition = playerPos.global_position #move towards the player always
 	var moveDirection = (endPosition - position)
 	if moveDirection.length() < limit:
 		changeDirection()
@@ -42,7 +46,7 @@ func _physics_process(delta):
 	updateVelocity()
 	move_and_slide()
 	updateAnimation()
-
+	#print(playerPos.global_position)
 
 func _on_hurt_box_area_entered(area):
 	if area == $hitBox: return
